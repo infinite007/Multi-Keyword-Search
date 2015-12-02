@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Search</title>
+	</head>
+	
+	<body>
+		<form method = "post" action = "PYUI.py">
+			<h2>Search : </h2>
+			<input type = "text" name = "search">
+			<input type = "submit" value = "submit" >
+		</form>
+	</body>
+
+	<script>
+	var app=angular.module('myApp',[]);
+		app.controller('ctrl',function($scope,$http)
+		{
+			$http.get("PYUI.py")
+			.success(function(response) {$scope.courses=response;});
+		});
+		</script>
+</html>
