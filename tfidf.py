@@ -23,3 +23,6 @@ class rank:
 			return math.log(1+length/float(1+i)) 
 		else:
 			return 0
+			
+	def tfidf(self,word,docs=[],doc):
+		return self.tf(self,word,doc)*self.idf(self,word,docs)
