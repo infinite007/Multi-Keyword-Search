@@ -18,7 +18,7 @@ class rank:
 		i=0
 		if word not in self.stop:
 			for d in doc:
-				for word in d:
+				if word in d:
 					i+=1
 			return math.log(1+length/float(1+i)) 
 		else:
