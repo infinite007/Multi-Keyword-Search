@@ -1,4 +1,4 @@
-from tfidf import rank
+import rank
 from textblob import TextBlob as tb
 from DBSearch import DBSearch 
 
