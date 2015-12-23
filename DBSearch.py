@@ -27,9 +27,8 @@ class DBSearch:
 		except:
 			logger.error("[ERROR]    Failed SEARCH operation")
 
-	def getJSON(self,nonJSON):
-		doc = json(nonJSON)
-		return doc
+	def getAll(self):
+		return DBObj(self.dbname,self.collection).getCollection().find()
 
 	def logfunc(self, lvl):
 		return self.log.logobj(lvl)
