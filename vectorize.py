@@ -10,8 +10,6 @@ creates a dictionary which has word and its tfidf score as a key value pair.
 class vectorize:
 	
 	def __init__(self):	
-		self.r = rank()
-		#self.log = Logger()
 		print 'vectorizer initialized!'
 	
 	def construct(self):
